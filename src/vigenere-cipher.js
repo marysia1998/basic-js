@@ -27,7 +27,7 @@ class VigenereCipheringMachine {
   }
   encrypt(str, key) {
     if(!str || !key) {
-      throw new NotImplementedError("Incorrect arguments!")
+      throw new Error("Incorrect arguments!")
     }
     let words = str.toUpperCase().split(' ');
     key = key.toUpperCase();
@@ -74,7 +74,7 @@ class VigenereCipheringMachine {
 }
 decrypt(str, key) {
   if(!str || !key) {
-    throw new NotImplementedError("Incorrect arguments!")
+    throw new Error("Incorrect arguments!")
   }
   let words = str.toUpperCase().split(' ');
   key = key.toUpperCase();

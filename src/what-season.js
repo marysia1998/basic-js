@@ -18,13 +18,13 @@ function getSeason(date) {
   try {
     date.getMonth()
   } catch (e) {
-    throw new NotImplementedError("Invalid date!");
+    throw new Error("Invalid date!");
   }
-  if(date.toString().split(' ')[3] !== date.getFullYear() ) {
-    throw new NotImplementedError("Invalid date!");
+  if(date.toString().split(' ')[3] != date.getFullYear() ) {
+    throw new Error("Invalid date!");
   }
   if(!(date instanceof Date)) {
-    throw new NotImplementedError("Invalid date!");
+    throw new Error("Invalid date!");
   }
   if(isNaN(Date.parse(date))) {
     throw new Error("Invalid date!");
