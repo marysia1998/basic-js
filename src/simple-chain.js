@@ -19,7 +19,7 @@ const chainMaker = {
   removeLink(position) {
     if(position <= 0 || position > this.getLength() || typeof position != "number") {
       arr = [];
-      throw new NotImplementedError('You can\'t remove incorrect link!');
+      throw new Error('You can\'t remove incorrect link!');
     }
     arr = [...arr.slice(0, position-1), ...arr.slice(position)];
     return this;
